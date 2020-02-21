@@ -1,0 +1,48 @@
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.masonry-layout {
+  --gap: 1em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[var];
+      grid-template-columns: repeat(var(--columns), 1fr);
+  grid-gap: var(--gap);
+}
+
+.masonry-layout.columns-1 {
+  --columns: 1;
+}
+
+.masonry-layout.columns-2 {
+  --columns: 2;
+}
+
+.masonry-layout.columns-3 {
+  --columns: 3;
+}
+
+.masonry-layout.columns-4 {
+  --columns: 4;
+}
+
+.masonry-layout.columns-5 {
+  --columns: 5;
+}
+
+.masonry-layout .masonry-item {
+  margin-bottom: var(--gap);
+}
+
+.masonry-layout .card img {
+  max-width: 100%;
+  min-width: 200px;
+}
+/*# sourceMappingURL=styles.css.map */

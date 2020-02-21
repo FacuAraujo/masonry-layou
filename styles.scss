@@ -1,0 +1,30 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+  }
+  
+.masonry-layout {
+    --gap: 1em;
+    $minWidth: 200px;
+    $columns: 5;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    grid-gap: var(--gap);
+
+    @for $i from 1 through $columns {
+        &.columns-#{$i} {
+            --columns: #{$i};
+        }
+    }
+
+    .masonry-item {
+        margin-bottom: var(--gap);
+    }
+
+    .card img {
+        max-width: 100%;
+        min-width: $minWidth;
+    }
+}
